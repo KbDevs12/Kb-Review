@@ -1,29 +1,10 @@
 import Card from "./components/card";
 import Footer from "./components/footer";
 import Navbar from "./components/navbar";
+import animeData from "./data/animeData";
 
 export default function Home() {
-  const animeData: Anime[] = [
-    {
-      id: "1",
-      title: "Naruto",
-      imageUrl:
-        "https://cdn.discordapp.com/attachments/1203378913951219784/1213415628610867220/naruto.webp?ex=65f5645e&is=65e2ef5e&hm=bc38e0a7aeeff404effa5dfb73fa53fd04921fdc172b513363424e286ae23878&",
-      synopsis: "Cerita tentang seorang ninja bernama Naruto Uzumaki.",
-      score: 8.6,
-      link: "/login",
-    },
-    {
-      id: 2,
-      title: "One Piece",
-      imageUrl:
-        "https://cdn.discordapp.com/attachments/1203378913951219784/1213482335773790309/one-piece.webp?ex=65f5a27e&is=65e32d7e&hm=911f0d6e25387f66d894ad21f16a619f00db6d2929f1d7b33530709ba266daa8&",
-      synopsis: "Cerita tentang petualangan bajak laut Topi Jerami.",
-      score: 9.0,
-      link: "/",
-    },
-  ];
-
+  
   return (
     <>
       <header>

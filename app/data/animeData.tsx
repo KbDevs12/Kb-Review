@@ -1,0 +1,43 @@
+const animeData = [
+    {
+      id: 1,
+      title: "Naruto",
+      imageUrl: "https://cdn.discordapp.com/attachments/1203378913951219784/1213415628610867220/naruto.webp?ex=65f5645e&is=65e2ef5e&hm=bc38e0a7aeeff404effa5dfb73fa53fd04921fdc172b513363424e286ae23878&",
+      synopsis: "Cerita tentang seorang ninja bernama Naruto Uzumaki.",
+      score: 8.6,
+      link: '/NarutoPage',
+      review: '"Naruto" adalah klasik yang tak lekang oleh waktu dan telah meninggalkan jejak yang tak terhapuskan dalam dunia anime. Dengan kisahnya yang memikat tentang seorang ninja muda yang berusaha untuk diakui, anime ini membawa penonton pada rollercoaster emosional yang penuh aksi, humor, dan kehangatan. Perkembangan karakternya luar biasa, terutama perjalanan Naruto dari seorang nakal yang suka membuat masalah menjadi seorang pahlawan yang dihormati. Tema-tema dalam anime ini seperti persahabatan, ketekunan, dan penebusan sangatlah dalam, menjadikannya tontonan wajib bagi penggemar genre ini.',
+      videoId: '-G9BqkgZXRA?si=3bvTmKeINp-AA1BY',
+    },
+    {
+      id: 2,
+      title: 'One Piece',
+      imageUrl: 'https://cdn.discordapp.com/attachments/1203378913951219784/1213482335773790309/one-piece.webp?ex=65f5a27e&is=65e32d7e&hm=911f0d6e25387f66d894ad21f16a619f00db6d2929f1d7b33530709ba266daa8&',
+      synopsis: 'Cerita tentang petualangan bajak laut Topi Jerami.',
+      score: 9.0,
+      review: '"One Piece" menjadi prestasi monumental dalam dunia anime dan manga. Dunia yang kaya, beragamnya karakter, dan cerita epik membuatnya petualangan yang memikat dari awal hingga akhir. Serial ini dengan lancar menggabungkan aksi, humor, dan drama, menjaga agar penonton tetap terlibat dan terhubung emosional dalam pencarian Bajak Laut Topi Jerami untuk harta karun legendaris One Piece. Dengan tema-tema inspiratif seperti persahabatan, kebebasan, dan mengejar impian, "One Piece" dengan pantas mendapatkan tempatnya sebagai klasik yang dicintai.',
+      link: '/OnePiecePage',
+      videoId: 'MCb13lbVGE0?si=QTJ9nIJtm9uEuXoE',
+    },
+    {
+      id: 3,
+      title: 'Attack on Titan',
+      imageUrl: 'https://cdn.discordapp.com/attachments/1203378913951219784/1213540120297349140/aot.webp?ex=65f5d84f&is=65e3634f&hm=f78e7e6cb87acf0884af8fc948bdf79b67b56307ddd09f8543dd24a9c51987b8&',
+      synopsis: 'Cerita tentang manusia yang berperang melawan raksasa.',
+      score: 9.0,
+      review: '"Attack on Titan" adalah anime yang menghanyutkan dan intens yang membuat penonton duduk di ujung kursi mereka. Dengan latar dunia di mana umat manusia berada di ambang kepunahan karena makhluk raksasa humanoid yang dikenal sebagai Titan, serial ini mengeksplorasi tema-tema kompleks seperti kelangsungan hidup, kebebasan, dan sifat manusia. Suasana gelap dan kusam anime ini, ditambah dengan animasi yang memukau dan adegan aksi yang intens, membuatnya menjadi pengalaman yang mendebarkan dan tak terlupakan.',
+      link: '/AoTPage',
+      videoId: 'LV-nazLVmgo?si=WTnBg6vDKXwv9wbk',
+    },
+    {
+      id: 4,
+      title: 'Demon Slayer',
+      imageUrl: 'https://cdn.discordapp.com/attachments/1203378913951219784/1213540671290347610/demon.webp?ex=65f5d8d2&is=65e363d2&hm=d7680acca51412616d5725268b4511f0fa42e3286f5cd177de4b85c18868b9ab&',
+      synopsis: 'Cerita tentang pemburu iblis yang mencari pembunuh keluarganya.',
+      review: '"Demon Slayer" adalah anime yang visualnya memukau dan emosional yang menggugah hati penonton di seluruh dunia. Serial ini mengikuti perjalanan Tanjiro Kamado, seorang anak muda yang menjadi pemburu iblis setelah keluarganya dibantai oleh iblis, dan perjalanannya untuk membalas dendam kematian mereka dan menyelamatkan adiknya yang berubah menjadi iblis, Nezuko. Animasi yang memukau, karakter yang memikat, dan cerita yang menyentuh membuat "Demon Slayer" menjadi luar biasa dalam genre ini. Tema-tema seperti keluarga, cinta, dan penebusan ditampilkan dengan indah, menjadikan "Demon Slayer" tontonan wajib bagi penggemar anime.',
+      score: 8.7,
+      link: '/DemonSlayerPage',
+      videoId: 'ihIX-fibbxE?si=pXoj2_JSU3L1bUyt',
+    },
+    ];
+    export default animeData;
