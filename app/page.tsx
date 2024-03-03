@@ -49,7 +49,7 @@ const Home = async () => {
         <AnimeListCard api={TopAnimes} />
       </section>
       <section>
-        <Header title="Rekomendasi" />
+        <Header title="Rekomendasi :" />
         <RecListCard api={Recommendations} />
       </section>
     </>
