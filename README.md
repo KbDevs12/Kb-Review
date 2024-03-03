@@ -1,9 +1,9 @@
 # KB Review Anime
 
-![GitHub last commit](https://img.shields.io/github/last-commit/kangbaso/kb-review-anime)
-![GitHub issues](https://img.shields.io/github/issues/kangbaso/kb-review-anime)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/kangbaso/kb-review-anime)
-![GitHub](https://img.shields.io/github/license/kangbaso/kb-review-anime)
+![GitHub last commit](https://img.shields.io/github/last-commit/KbDevs12/anime-nextjs)
+![GitHub issues](https://img.shields.io/github/issues/KbDevs12/anime-nextjs)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/KbDevs12/anime-nextjs)
+![GitHub](https://img.shields.io/github/license/KbDevs12/anime-nextjs)
 
 Welcome to KB Review Anime, a website for rating and reviewing anime. This project is built using Next.js and Tailwind CSS.
 
@@ -17,10 +17,10 @@ Welcome to KB Review Anime, a website for rating and reviewing anime. This proje
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/kangbaso/kb-review-anime.git
+   git clone https://github.com/KbDevs12/anime-nextjs.git
 2. Install dependencies
     ```bash
-    cd kb-review-anime
+    cd anime-nextjs
     npm install
 3. Start the development server
     ```bash
