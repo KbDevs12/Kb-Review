@@ -16,13 +16,14 @@ const shuffleArray = (array: any[]) => {
   return shuffledArray;
 };
 const Home = async () => {
-  const TopAnimes = await getAnimeResponse("top/anime", "limit=8");
+  const TopAnimes = await getAnimeResponse("/top/anime", "limit=8");
   let Recommendations = await getNestAnimeRecResponse(
     "recommendations/anime",
     "entry"
   );
   Recommendations = shuffleArray(Recommendations);
   Recommendations = { data: Recommendations.slice(0, 8) };
+
   return (
     <>
       <main className="flex-1">
