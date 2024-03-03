@@ -7,12 +7,12 @@ interface AnimeListCardProps {
 
 const AnimeListCard = ({ api }: AnimeListCardProps) => {
   return (
-    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-5 px-4">
-      {api.data.map((anime: any) => {
+    <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-5 px-4 rounded-md">
+      {api.data?.map((anime: any) => {
         return (
           <div
             key={anime.mal_id}
-            className="relative overflow-hidden hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+            className="relative overflow-hidden rounded-md hover:shadow-primary hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
           >
             <Link href={`/${anime.mal_id}`} className="cursor-pointer">
               <Image

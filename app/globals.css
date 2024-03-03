@@ -24,6 +24,28 @@ img {
   max-height: 400px;
   height: auto;
 }
+
+.custom-loader {
+  --d:44px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  color: #766DF4;
+  box-shadow: 
+    calc(1*var(--d))      calc(0*var(--d))     0 0,
+    calc(0.707*var(--d))  calc(0.707*var(--d)) 0 2px,
+    calc(0*var(--d))      calc(1*var(--d))     0 4px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 6px,
+    calc(-1*var(--d))     calc(0*var(--d))     0 8px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 10px,
+    calc(0*var(--d))      calc(-1*var(--d))    0 12px;
+  animation: s7 1s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {transform: rotate(1turn)}
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

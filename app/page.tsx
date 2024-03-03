@@ -1,10 +1,8 @@
 import AnimeListCard from "./components/AnimeListCard/AnimeListCard";
 import Header from "./components/AnimeListCard/Header";
-
+import { getAnimeResponse } from "./services/api-service";
 const Home = async () => {
-  const response = await fetch(`${process.env.JIKAN_API}/top/anime?limit=8`);
-  const TopAnimes = await response.json();
-
+  const TopAnimes = await getAnimeResponse("/top/anime", "limit=8");
   return (
     <>
       <main className="flex-1">
