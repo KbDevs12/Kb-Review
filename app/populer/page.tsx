@@ -10,15 +10,15 @@ const Page = () => {
   const [topAnime, setTopAnime] = useState<any>([]);
 
   const fetchData = async () => {
-<<<<<<< HEAD
+
     setLoading(true);
     const data = await getAnimeResponse("top/anime", `page${page}`);
-=======
+
     const response = await fetch(
       `https://api.jikan.moe/v4/top/anime?page=${page}`
     );
     const data = await response.json();
->>>>>>> 9ac6d238fe6832ca72bf713ba10f5bd0fe273c50
+
     setTopAnime(data);
   };
 
