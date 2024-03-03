@@ -2,7 +2,7 @@ import AnimeListCard from "./components/AnimeListCard/AnimeListCard";
 import Header from "./components/AnimeListCard/Header";
 import { getAnimeResponse } from "./services/api-service";
 const Home = async () => {
-  const TopAnimes = await getAnimeResponse("/top/anime", "limit=8");
+  const TopAnimes = await getAnimeResponse("top/anime", "limit=8");
   return (
     <>
       <main className="flex-1">
