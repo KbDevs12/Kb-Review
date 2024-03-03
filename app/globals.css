@@ -17,8 +17,7 @@
 }
 
 body {
-  color: black;
-  background-color: black;
+  background-color: white;
 }
 img {
   min-height: 300px;
@@ -57,9 +56,9 @@ img {
 
 .typing-animation {
   overflow: hidden;
-  border-right: 0.15em solid orange;
+  border-right: 0.15em solid #535C91;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.10em;
   animation: typing 3s steps(40) infinite alternate-reverse;
 }
