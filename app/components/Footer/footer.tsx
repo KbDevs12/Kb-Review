@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-slate-400 text-white py-4 mt-8">
       <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         <p className="text-center text-sm lg:text-left">
-          © 2022 Website Rating Anime. All Rights Reserved.
+          © 2024 Website Rating Anime By Kang Baso. All Rights Reserved.
         </p>
         <form className="mt-4 lg:mt-0 flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
           <input

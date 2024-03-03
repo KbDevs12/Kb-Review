@@ -1,37 +1,45 @@
-import Card from "./components/card";
-import Footer from "./components/footer";
-import Navbar from "./components/navbar";
-import animeData from "./data/animeData";
+import AnimeListCard from "./components/AnimeListCard/AnimeListCard";
 
-export default function Home() {
-  
+const Home = async () => {
+  const response = await fetch(`${process.env.JIKAN_API}/top/anime?limit=8`);
+  const animes = await response.json();
+
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main className="flex-1">
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-center text-white mb-4 typing-animation">
+            <h1 className="md:text-4xl sm:text-3xl text-lg font-bold text-center text-white mb-4 typing-animation">
               SELAMAT DATANG DI KB REVIEW
             </h1>
-            <p className="text-lg text-center text-white">
+            <p className="md:text-lg text-sm text-center text-white font-serif">
               Kami menyediakan ulasan terbaru dan terkini tentang anime, manga,
               dan banyak lagi. Temukan informasi yang Anda butuhkan untuk
               memilih hiburan terbaik untuk Anda!
             </p>
+            <p className="text-lg mt-4 text-left text-white font-sans p-4">
+              Anime Terpopuler :
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {animeData.map((anime) => (
-              <div key={anime.id} className="px-4">
-                <Card anime={anime} />
-              </div>
-            ))}
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-5 px-4">
+            {animes.data.map((data: any) => {
+              return (
+                <div key={data.mal_id} className="shadow-xl">
+                  <AnimeListCard
+                    title={data.title}
+                    images={data.images.webp.image_url}
+                    episode={data.episodes}
+                    type={data.type}
+                    id={data.mal_id}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </main>
-      <Footer />
     </>
   );
-}
+};
+
+export default Home;
