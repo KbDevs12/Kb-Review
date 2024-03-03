@@ -1,8 +1,28 @@
 import AnimeListCard from "./components/AnimeListCard/AnimeListCard";
 import Header from "./components/AnimeListCard/Header";
-import { getAnimeResponse } from "./services/api-service";
+import RecListCard from "./components/RecListCard/RecListCard";
+
+import {
+  getAnimeResponse,
+  getNestAnimeRecResponse,
+} from "./services/api-service";
+
+const shuffleArray = (array: any[]) => {
+  const shuffledArray = array.slice(); // Copy array
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
 const Home = async () => {
-  const TopAnimes = await getAnimeResponse("/top/anime", "limit=8");
+  const TopAnimes = await getAnimeResponse("top/anime", "limit=8");
+  let Recommendations = await getNestAnimeRecResponse(
+    "recommendations/anime",
+    "entry"
+  );
+  Recommendations = shuffleArray(Recommendations);
+  Recommendations = { data: Recommendations.slice(0, 8) };
   return (
     <>
       <main className="flex-1">
@@ -26,6 +46,10 @@ const Home = async () => {
           linkHref="/populer"
         />
         <AnimeListCard api={TopAnimes} />
+      </section>
+      <section>
+        <Header title="Rekomendasi" />
+        <RecListCard api={Recommendations} />
       </section>
     </>
   );

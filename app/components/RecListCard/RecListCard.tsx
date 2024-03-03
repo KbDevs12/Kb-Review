@@ -5,7 +5,7 @@ interface AnimeListCardProps {
   api: any;
 }
 
-const AnimeListCard = ({ api }: AnimeListCardProps) => {
+const RecListCard = ({ api }: AnimeListCardProps) => {
   return (
     <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-5 px-4 rounded-md">
       {api.data?.map((anime: any, index: number) => {
@@ -22,16 +22,6 @@ const AnimeListCard = ({ api }: AnimeListCardProps) => {
                 width={350}
                 height={350}
               />
-              <div className="absolute top-0 left-0 bg-accent text-black font-bold uppercase p-2 rounded-md">
-                <span className="hidden sm:inline">{anime.type}</span>
-                <span className="sm:hidden text-sm">{anime.type}</span>
-              </div>
-              <div className="absolute top-0 right-0 bg-accent text-black p-2 rounded-md">
-                <span className="hidden sm:inline">
-                  Episodes: {anime.episodes}
-                </span>
-                <span className="sm:hidden text-sm">Ep: {anime.episodes}</span>
-              </div>
               <h3 className="text-white text-center p-1">{anime.title}</h3>
             </Link>
           </div>
@@ -41,4 +31,4 @@ const AnimeListCard = ({ api }: AnimeListCardProps) => {
   );
 };
 
-export default AnimeListCard;
+export default RecListCard;

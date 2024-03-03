@@ -4,7 +4,7 @@ import HeadMenus from "../components/Header/HeadMenu";
 import Pagination from "../components/Pagination/Pagination";
 import AnimeListCard from "../components/AnimeListCard/AnimeListCard";
 import Pages from "../loading";
-
+import { getAnimeResponse } from "../services/api-service";
 const Page = () => {
   const [page, setPage] = useState(1);
   const [topAnime, setTopAnime] = useState<any>([]);
@@ -12,10 +12,7 @@ const Page = () => {
 
   const fetchData = async () => {
     setLoading(true);
-    const response = await fetch(
-      `https://api.jikan.moe/v4/top/anime?page=${page}`
-    );
-    const data = await response.json();
+    const data = await getAnimeResponse("top/anime", `page${page}`);
     setTopAnime(data);
     setLoading(false);
   };
