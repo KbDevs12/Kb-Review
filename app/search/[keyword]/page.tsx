@@ -14,7 +14,7 @@ const Page = async ({ params }: { params: any }) => {
       <>
         <Header title={`Hasil Pencarian "${titles}":`} />
         <p className="text-center text-md md:text-2xl">
-          Tidak ada anime bernama "{titles}"
+          Tidak ada anime bernama {titles}
         </p>
       </>
     );
@@ -23,7 +23,7 @@ const Page = async ({ params }: { params: any }) => {
   // Jika ada hasil pencarian, tampilkan list anime
   return (
     <>
-      <Header title={`Hasil Pencarian "${titles}":`} />
+      <Header title={`Hasil Pencarian ${titles} :`} />
       <AnimeListCard api={Hasil} />
     </>
   );
