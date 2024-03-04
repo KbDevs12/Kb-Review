@@ -40,18 +40,20 @@ const Home = async () => {
           </div>
         </div>
       </main>
-      <section>
-        <Header
-          title="Paling Populer"
-          linkTitle="Lihat Semua.."
-          linkHref="/populer"
-        />
-        <AnimeListCard api={TopAnimes} />
-      </section>
-      <section>
-        <Header title="Rekomendasi :" />
-        <RecListCard api={Recommendations} />
-      </section>
+      <div className=" pt-4 gap-2">
+        <section>
+          <Header
+            title="Paling Populer"
+            linkTitle="Lihat Semua.."
+            linkHref="/populer"
+          />
+          <AnimeListCard api={TopAnimes} />
+        </section>
+        <section>
+          <Header title="Rekomendasi :" />
+          <RecListCard api={Recommendations} />
+        </section>
+      </div>
     </>
   );
 };

@@ -5,17 +5,28 @@ import { getAnimeResponse } from "../../services/api-service";
 const Page = async ({ params }: { params: any }) => {
   const key = params.keyword;
   const titles = decodeURIComponent(params.keyword);
-  // const response = await fetch(`${process.env.JIKAN_API}/anime?q=${key}`);
-  // const Hasil = await response.json();
+
   const Hasil = await getAnimeResponse("anime", `q=${key}`);
 
+  if (!Hasil || !Hasil.results || Hasil.results.length === 0) {
+    // Jika hasil pencarian kosong, tampilkan pesan
+    return (
+      <>
+        <Header title={`Hasil Pencarian "${titles}":`} />
+        <p className="text-center text-md md:text-2xl">
+          Tidak ada anime bernama "{titles}"
+        </p>
+      </>
+    );
+  }
+
+  // Jika ada hasil pencarian, tampilkan list anime
   return (
     <>
-      <section>
-        <Header title={`Hasil Pencarian " ${titles} " : `} />
-        <AnimeListCard api={Hasil} />
-      </section>
+      <Header title={`Hasil Pencarian "${titles}":`} />
+      <AnimeListCard api={Hasil} />
     </>
   );
 };
+
 export default Page;

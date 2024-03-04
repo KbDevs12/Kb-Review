@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import InputSearch from "./InputSearch";
+import UserActionBtn from "./UserActionBtn";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,10 +41,14 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="flex-1 flex justify-end lg:justify-end">
-              <div className="hidden md:flex md:items-center justify-end">
+              <div className="hidden md:flex md:items-center justify-end gap-2">
+                <div className=" gap-4">
+                  <UserActionBtn />
+                </div>
                 <InputSearch />
               </div>
-              <div className="flex md:hidden">
+              <div className="flex md:hidden gap-2">
+                <UserActionBtn />
                 <button
                   onClick={toggleMenu}
                   type="button"

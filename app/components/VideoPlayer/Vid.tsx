@@ -3,7 +3,6 @@ import Youtube from "react-youtube";
 import { useState } from "react";
 const VideoPlayer = ({ youtubeId }: { youtubeId: any }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [videoError, setVideoError] = useState(false);
 
   const HandleButtonsX = () => {
     setIsOpen((prevState) => !prevState);
@@ -24,7 +23,6 @@ const VideoPlayer = ({ youtubeId }: { youtubeId: any }) => {
         <Youtube
           videoId={youtubeId}
           onReady={(event) => event.target.pauseVideo()}
-          onError={() => setVideoError(true)}
           opts={option}
         />
       </div>
