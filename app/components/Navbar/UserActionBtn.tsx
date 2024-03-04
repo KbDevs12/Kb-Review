@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { LoginSession } from "@/app/services/auth-service";
+
 const UserActionBtn = async () => {
   const user = await LoginSession();
   const actLabel = user ? "Sign Out" : "Sign In";
   const actUrl = user ? "/api/auth/signout" : "/api/auth/signin";
   return (
-    <div className=" px-2 gap-4 items-center justify-center transition-all">
-      <div className="flex justify-between items-center px-2">
+    <div className=" items-center justify-center transition-all">
+      <div className="flex justify-between items-center px-2 pt-2">
         {user ? (
           <Link
             href="/users/dashboard"

@@ -23,7 +23,6 @@ const Home = async () => {
   );
   Recommendations = shuffleArray(Recommendations);
   Recommendations = { data: Recommendations.slice(0, 8) };
-
   return (
     <>
       <main className="flex-1">

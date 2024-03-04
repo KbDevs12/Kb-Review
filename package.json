@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",
+    "@types/next-auth": "^3.15.0",
     "dotenv": "^16.4.5",
     "next": "14.1.1",
     "next-auth": "^4.24.6",
