@@ -7,7 +7,7 @@ const UserActionBtn = async () => {
   const actUrl = user ? "/api/auth/signout" : "/api/auth/signin";
   return (
     <div className=" items-center justify-center transition-all">
-      <div className="flex justify-between items-center px-2 pt-2">
+      <div className="flex justify-between items-center pt-2 gap-5">
         {user ? (
           <Link
             href="/users/dashboard"

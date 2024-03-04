@@ -1,13 +1,13 @@
-import nextAuth from "next-auth";
+import nextAuth, { NextAuthOptions } from "next-auth";
 import githubAuth from "next-auth/providers/github";
-export const authOpt = {
+export const authOpt: NextAuthOptions = {
   providers: [
     githubAuth({
       clientId: `${process.env.GITHUB_CLIENT}`,
       clientSecret: `${process.env.GITHUB_SECRET}`,
     }),
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: `${process.env.NEXTAUTH_SECRET}`,
 };
 const handlerAuth = nextAuth(authOpt);
 
