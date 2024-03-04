@@ -5,21 +5,17 @@ import Pagination from "../components/Pagination/Pagination";
 import AnimeListCard from "../components/AnimeListCard/AnimeListCard";
 import Pages from "../loading";
 import { getAnimeResponse } from "../services/api-service";
+
 const Page = () => {
   const [page, setPage] = useState(1);
   const [topAnime, setTopAnime] = useState<any>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
-
-    setLoading(true);
-    const data = await getAnimeResponse("top/anime", `page${page}`);
-
-    const response = await fetch(
-      `https://api.jikan.moe/v4/top/anime?page=${page}`
-    );
-    const data = await response.json();
-
+    setIsLoading(true);
+    const data = await getAnimeResponse("top/anime", `page=${page}`);
     setTopAnime(data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -29,7 +25,7 @@ const Page = () => {
   return (
     <>
       <HeadMenus title={`Anime Terpopuler Halaman ${page}`} />
-      {!topAnime ? (
+      {isLoading ? (
         <Pages />
       ) : (
         <>

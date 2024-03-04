@@ -9,7 +9,7 @@ interface HeaderProps {
 const Header = ({ title, linkHref, linkTitle }: HeaderProps) => {
   return (
     <div className="flex justify-between items-center p-4">
-      <p className="text-lg mt-4 text-white">{title}</p>
+      <p className="text-lg mt-5">{title}</p>
       {linkHref && linkTitle ? (
         <Link
           href={linkHref}

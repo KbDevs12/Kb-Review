@@ -16,7 +16,7 @@ const shuffleArray = (array: any[]) => {
   return shuffledArray;
 };
 const Home = async () => {
-  const TopAnimes = await getAnimeResponse("/top/anime", "limit=8");
+  const TopAnimes = await getAnimeResponse("top/anime", "limit=8");
   let Recommendations = await getNestAnimeRecResponse(
     "recommendations/anime",
     "entry"
