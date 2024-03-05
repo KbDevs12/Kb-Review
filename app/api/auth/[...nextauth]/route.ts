@@ -1,8 +1,6 @@
-import nextAuth from "next-auth";
-import type { NextApiRequest, NextApiResponse } from "next";
+import nextAuth, { NextAuthOptions } from "next-auth";
 import { authOpt } from "../../../../src/auth-github";
 
-export default async function auth(req: NextApiRequest, res: NextApiResponse) {
-  const providers = authOpt;
-  return await nextAuth(req, res, providers);
-}
+const handlerAuth: NextAuthOptions = nextAuth(authOpt);
+
+export { handlerAuth as GET, handlerAuth as POST };
