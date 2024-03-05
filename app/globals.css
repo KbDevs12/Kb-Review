@@ -84,3 +84,10 @@ img {
   letter-spacing: 0.10em;
   animation: typing 3s steps(40) infinite alternate-reverse;
 }
+@media (max-width: 450px) {
+    img {
+      min-height: 200px;
+      max-height: 350px;
+      height: 200px;
+    } 
+}

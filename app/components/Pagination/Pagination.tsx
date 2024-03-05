@@ -24,7 +24,7 @@ const Pagination = ({ page, LastPage, setPage }: PageProps) => {
   return (
     <>
       <div className="justify-center items-center p-4 flex gap-8">
-        {page <= 1 ? null : (
+        {page <= 1 ? <div className="w-12"></div> : (
           <button
             onClick={handlePrevPage}
             className="bg-primary p-4 rounded-md text-accent2 hover:bg-accent2 hover:text-primary hover:shadow-secondary hover:shadow-md gap-2 transition-all"
@@ -35,7 +35,7 @@ const Pagination = ({ page, LastPage, setPage }: PageProps) => {
         <p>
           {page} Of {LastPage}
         </p>
-        {page >= LastPage ? null : (
+        {page >= LastPage ? <div className="w-12"></div> : (
           <button
             onClick={handleNextPage}
             className="bg-primary p-4 rounded-md text-accent2 hover:bg-accent2 hover:text-primary hover:shadow-secondary hover:shadow-md gap-2 transition-all"

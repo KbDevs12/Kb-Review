@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
-import HeadMenus from "../components/Header/HeadMenu";
-import Pagination from "../components/Pagination/Pagination";
-import AnimeListCard from "../components/AnimeListCard/AnimeListCard";
-import Pages from "../loading";
-import { getAnimeResponse } from "../services/api-service";
+import HeadMenus from "../../components/Header/HeadMenu";
+import Pagination from "../../components/Pagination/Pagination";
+import Pages from "../../loading";
+import { getAnimeResponse } from "../../services/api-service";
+import MangaList from "@/app/components/MangaList/MangaList";
 
 const Page = () => {
   const [page, setPage] = useState(1);
@@ -13,7 +13,7 @@ const Page = () => {
 
   const fetchData = async () => {
     setIsLoading(true);
-    const data = await getAnimeResponse("top/anime", `page=${page}`);
+    const data = await getAnimeResponse("top/manga", `page=${page}`);
     setTopAnime(data);
     setIsLoading(false);
   };
@@ -24,12 +24,12 @@ const Page = () => {
 
   return (
     <>
-      <HeadMenus title={`Anime Terpopuler Halaman ${page}`} />
+      <HeadMenus title={`Manga Terpopuler Halaman ${page}`} />
       {isLoading ? (
         <Pages />
       ) : (
         <>
-          <AnimeListCard api={topAnime} />
+          <MangaList Api={topAnime} />
           <Pagination
             page={page}
             LastPage={

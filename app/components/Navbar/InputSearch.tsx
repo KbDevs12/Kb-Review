@@ -20,7 +20,7 @@ const InputSearch = () => {
       <input
         type="text"
         className="w-full md:w-auto ml-4 md:ml-0 focus:outline-none focus:bg-white border border-gray-300 rounded-md py-1 px-3 text-sm"
-        placeholder="Cari anime..."
+        placeholder="Cari anime/manga..."
         ref={searchRef}
         onKeyDown={handleSearch}
       />

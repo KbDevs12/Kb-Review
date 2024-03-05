@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-dark text-secondary py-4 mt-8">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
+      <div className="mx-auto px-4 flex flex-col lg:flex-row items-center justify-between">
         <p className="text-center text-sm lg:text-left">
           © 2024 Website Rating Anime By Kang Baso. All Rights Reserved.
         </p>
