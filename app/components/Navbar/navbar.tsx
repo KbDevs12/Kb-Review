@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 import InputSearch from "./InputSearch";
-import UserActionBtn from "./UserActionBtn";
 
 const Navbar = () => {
   return (
@@ -26,7 +25,6 @@ const Navbar = () => {
           >
             Tentang
           </Link>
-          <UserActionBtn />
         </div>
         <div className=" md:absolute md:end-2 md:pt-2">
           <InputSearch />
